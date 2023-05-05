@@ -55,6 +55,7 @@
 
 
 8. You can turnoff the download model flag and download manually instead.
+    
     Turn off the USE_CUDA flag
     Cmake option to : UNIX Files
     NOTE: To set GPU_MODE flag to CPU_ONLY when building the tool via cli, append -D GPU_MODE:STRINGS=CPU_ONLY to the cmake command.
@@ -66,6 +67,11 @@
     Close the CMake-GUI window and return to your terminal. To compile into binary files, run the command below:
     
     ![I2](photo/I2.png)
+    
+    Note: 
+    The models should be kept in the same way as the downloaded models are kept inside the models/ folder.
+    Better not to download the model manually.
+    After the download completes,Copy the models/ directory in your project directory.
 
 10. To install the Openpose python module called pyopenpose, do the following command:
     
