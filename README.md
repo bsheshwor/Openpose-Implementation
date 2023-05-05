@@ -39,8 +39,9 @@
     ```
     
     Optional: To ensure no more compilation errors appear later on, install the following packages
+    ```
     sudo apt-get install protobuf-compiler libprotobuf-dev libgoogle-glog-dev libblkid-dev e2fslibs-dev libboost-all-dev libaudit-dev libcanberra-gtk-module libcanberra-gtk3-module
-
+     ```
 
 7. CMake configuration
     
@@ -50,21 +51,25 @@
     cd build/
     cmake-gui ..
     ```
-    
     ![I1](photo/I1.png)
-
 
 8. You can turnoff the download model flag and download manually instead.
     
     Turn off the USE_CUDA flag
     Cmake option to : UNIX Files
-    NOTE: To set GPU_MODE flag to CPU_ONLY when building the tool via cli, append -D GPU_MODE:STRINGS=CPU_ONLY to the cmake command.
-    Also turn on the BUILD PYTHON flag
+    NOTE: To set GPU_MODE flag to CPU_ONLY when building the tool via cli, 
+    append -D GPU_MODE:STRINGS=CPU_ONLY to the cmake command.
+    Also turn ON the BUILD PYTHON flag
 
 9. Enter configure and generate.
     If any error about installation occurs, it suggests the package to install.
-    Install it using the recommended command
+    Install it using the recommended commands.
     Close the CMake-GUI window and return to your terminal. To compile into binary files, run the command below:
+    
+    ```
+    cd build/
+    make -j`nproc`
+    ```
     
     ![I2](photo/I2.png)
     
